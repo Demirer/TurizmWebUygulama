@@ -1,0 +1,51 @@
+﻿@model TurizmUygulama.Models.tur_bilgisi
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detaylar</h2>
+
+<div>
+    <h4>Tur Bilgileri</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TurAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TurAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaslangicTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaslangicTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaslangicSehri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaslangicSehri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TurSuresi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TurSuresi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.TurID }) |
+    @Html.ActionLink("Tur Listesine Dön", "Index")
+</p>

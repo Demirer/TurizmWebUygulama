@@ -1,0 +1,57 @@
+﻿@model TurizmUygulama.Models.tur_bilgisi
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tur Silme</h2>
+
+<h3>Bu turu silmek istediğinize emin misiniz?</h3>
+<div>
+    <h4>Tur Bilgileri</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TurAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TurAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaslangicTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaslangicTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaslangicSehri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaslangicSehri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TurSuresi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TurSuresi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Tur Listesine Dön", "Index")
+        </div>
+    }
+</div>
